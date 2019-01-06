@@ -55,7 +55,7 @@ gulp.task('serve', () => {
 	});
 
 	gulp.watch('app/less/**/*.less', gulp.parallel('style'));
-	gulp.watch('app/**/*.html').on('change', server.reload)
+	gulp.watch('app/**/*.html').on('change', gulp.series('clean', 'copy', 'style', server.reload))
 });
 
 gulp.task('copy', () => {
