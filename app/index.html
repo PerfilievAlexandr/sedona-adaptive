@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -26,91 +27,104 @@
     <a href="#" class="main-nav__close">close</a>
   </nav>
   <div class="page-header__picture">
+    <div class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)"
+                srcset="img/logotype-desktop.png"
+
+        />
+        <img src="./img/logotyle-mobile.png" alt="logo">
+      </picture>
+    </div>
+    <div class="page-header__text">
+      <picture>
+        <source media="(min-width: 768px)"
+                srcset="img/text-sedona-tablet.png"
+        />
+        <img src="./img/text-sedona-mobile.png" alt="text">
+      </picture>
+    </div>
   </div>
 </header>
 <section class="advanteges">
-  <h2 class="advanteges__title">
+  <h3 class="advanteges__title">
     Седона - небольшой городок в Аризоне, заслуживающий большего!
-  </h2>
+  </h3>
   <p class="advanteges__description">
     Рассмотрим 5 причин по которым Седона круче чем Гранд Каньон!
   </p>
   <ul class="advanteges__list">
     <li class="advanteges__item  advanteges__live">
-      <div class="advanteges__live-description">
-        <h4 advanteges__description-title>настоящий городок</h4>
-        <span class="advanteges__list-one">1</span>
+      <div class="advanteges__live-description  advanteges__live-description--live">
+        <h4 class="advanteges__item-title advanteges__item-title--live">настоящий городок</h4>
+        <span class="advanteges__list-number advanteges__list-number--live">- 1 -</span>
         <p>Седона - не отракцион для туристов, там течет своя жизнь</p>
       </div>
-      <div class="advanteges__live-picture">
-        <img src="#" alt="photo">
+      <div class="advanteges__live-picture-town">
       </div>
-      <ul class="advanteges__items">
-        <li class="advanteges__town-adventege">
-          <h4 class="advanteges__town-adventege-title" >жилье</h4>
+      <ul class="advanteges-live__items">
+        <li class="advanteges__town-adventege  advanteges__town-adventege--hostel">
+          <h4 class="advanteges__town-adventege-title  advanteges__town-adventege-title--hostel">жилье</h4>
           <p>рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
-        <li class="advanteges__town-adventege">
-          <h4 class="advanteges__town-adventege-title" >сувениры</h4>
+        <li class="advanteges__town-adventege  advanteges__town-adventege--suvenirs">
+          <h4 class="advanteges__town-adventege-title  advanteges__town-adventege-title--suvenirs">сувениры</h4>
           <p>не только китайского, но и местного производства!</p>
         </li>
-        <li class="advanteges__town-adventege">
-          <h4 class="advanteges__town-adventege-title" >еда</h4>
+        <li class="advanteges__town-adventege  advanteges__town-adventege--food">
+          <h4 class="advanteges__town-adventege-title  advanteges__town-adventege-title--food">еда</h4>
           <p>всегда заказывайте местный бургер, вы не разочаруетесь!</p>
         </li>
       </ul>
 
     </li>
     <li class="advanteges__item  advanteges__bridge">
-      <div class="advanteges__live-description">
-        <h4 advanteges__description-title>там есть мост дьявола</h4>
-        <span class="advanteges__list-one">2</span>
+      <div class="advanteges__live-description  advanteges__live-description--bridge">
+        <h4 class="advanteges__item-title  advanteges__item-title--bridge">там есть мост дьявола</h4>
+        <span class="advanteges__list-number">- 2 -</span>
         <p>да, по нему можно пройтись! Конечно если вы осмелитесью</p>
       </div>
-      <div class="advanteges__live-picture">
-        <img src="#" alt="photo">
+      <div class="advanteges__live-picture-bridge">
       </div>
     </li>
-    <li class="advanteges__item  advanteges__bridge">
-      <div class="advanteges__live-description">
-        <h4 advanteges__description-title>небольшая площадь</h4>
-        <span class="advanteges__list-one">3</span>
+    <li class="advanteges__item  advanteges__squere">
+      <div class="advanteges__live-description  advanteges__live-description--squere">
+        <h4 class="advanteges__item-title  advanteges__item-title--squere">небольшая <br>площадь</h4>
+        <span class="advanteges__list-number">- 3 -</span>
         <p>все достопримечательности находятся очень близко</p>
       </div>
     </li>
-    <li class="advanteges__item  advanteges__bridge">
-      <div class="advanteges__live-description">
-        <h4 advanteges__description-title>красивая дорога</h4>
-        <span class="advanteges__list-one">4</span>
+    <li class="advanteges__item  advanteges__road">
+      <div class="advanteges__live-description  advanteges__live-description--road">
+        <h4 class="advanteges__item-title  advanteges__item-title--road">красивая<br> дорога</h4>
+        <span class="advanteges__list-number">- 4 -</span>
         <p>ехать в седону из лас-вегаса совсем не скучно!</p>
       </div>
     </li>
-    <li class="advanteges__item  advanteges__bridge">
-      <div class="advanteges__live-description">
-        <h4 advanteges__description-title>мало туристов</h4>
-        <span class="advanteges__list-one">5</span>
+    <li class="advanteges__item  advanteges__tourists">
+      <div class="advanteges__live-description  advanteges__live-description--tourists">
+        <h4 class="advanteges__item-title  advanteges__item-title--tourists">мало<br> туристов</h4>
+        <span class="advanteges__list-number">- 5 -</span>
         <p>большиство идет в гранд коньен и толпится там</p>
       </div>
     </li>
   </ul>
 </section>
 <section class="reservation">
-  <h2 class="reservation__title">Заинтересовались?</h2>
+  <h3 class="reservation__title">Заинтересовались?</h3>
   <p>укажите предполагаемые даты поездки и мы покажем лучшие предложения гостинниц в седоне</p>
   <a href="#" class="reservation__find-hotel  btn">найти гостинницу</a>
-  <div class="reservation__map">карта</div>
+  <div class="reservation__map"></div>
 </section>
 
 <footer class="page-footer">
-  <div class="page-footer__visit">
-    <span class="page-footer__visit-Sedona"></span>
+  <span class="page-footer__visit-Sedona">#visitsedona</span>
+  <div class="page-footer__social">
+    <a href="#" class="page-footer__social-net">телеграмм</a>
+    <a href="#" class="page-footer__social-net">фейс</a>
+    <a href="#" class="page-footer__social-net">инст</a>
   </div>
-  <div class="page-footer__visit">
-    <a href="#" class="page-footer__sothial">телеграмм</a>
-    <a href="#" class="page-footer__sothial">фейс</a>
-    <a href="#" class="page-footer__sothial">инст</a>
-  </div>
-  <div class="page-footer">разработана html</div>
+  <div class="page-footer__developed">разработано<br>  <b>Perfiliev-Alexander</b></div>
 </footer>
 </body>
 </html>

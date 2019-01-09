@@ -1,0 +1,310 @@
+@import "variables";
+@import "mixins";
+
+.advanteges {
+  .conteiner();
+
+  box-sizing: border-box;
+  padding-top: 45px;
+
+}
+
+.advanteges__title {
+  .h3();
+
+  margin: 0;
+  margin-bottom: 35px;
+
+  text-align: center;
+}
+
+.advanteges__description {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.advanteges__list {
+  list-style: none;
+  padding: 0;
+}
+
+.advanteges__live-description {
+
+  box-sizing: border-box;
+  padding: 45px 20px;
+
+  color: @color-white;
+  background-color: @color-blue;
+
+  text-align: center;
+}
+
+.advanteges__item-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 21px;
+  line-height: 26px;
+
+}
+
+.advanteges__list-number {
+  display: block;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.advanteges__live-picture-town {
+  min-height: 269px;
+
+  background-image: url("../img/photo-city-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advanteges__live-description p {
+  margin: 0;
+}
+
+.advanteges-live__items {
+  box-sizing: border-box;
+
+  list-style: none;
+  padding: 0;
+}
+
+.advanteges__town-adventege {
+  position: relative;
+
+  padding-left: 70px;
+  padding-top: 40px;
+  padding-right: 20px;
+}
+
+.advanteges__town-adventege-title {
+  font-size: 18px;
+  line-height: 26px;
+  color: @color-black;
+
+  margin: 0;
+  margin-bottom: 20px;
+
+}
+
+.advanteges__town-adventege--hostel::after {
+  position: absolute;
+  content: "";
+  width: 39px;
+  height: 37px;
+  top: 30px;
+  left: 20px;
+
+  background-image: url("../img/icon-house.jpg");
+  background-repeat: no-repeat;
+}
+
+.advanteges__town-adventege--suvenirs::after {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 38px;
+  top: 30px;
+  left: 20px;
+
+  background-image: url("../img/icon-gift.jpg");
+  background-repeat: no-repeat;
+}
+
+.advanteges__town-adventege--food::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 35px;
+  top: 30px;
+  left: 20px;
+
+  background-image: url("../img/icon-burger.jpg");
+  background-repeat: no-repeat;
+}
+
+.advanteges__town-adventege:last-child {
+  margin-bottom: 40px;
+}
+
+.advanteges__town-adventege p {
+  margin: 0;
+}
+
+.advanteges__live-picture-bridge {
+  min-height: 260px;
+
+  background-image: url("../img/photo-bridge-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advanteges__live-description--squere, .advanteges__live-description--road, .advanteges__live-description--tourists {
+  background-color: @color-light-grey;
+}
+
+.advanteges__item-title--squere, .advanteges__item-title--road, .advanteges__item-title--tourists {
+
+  color: @color-black;
+}
+
+.advanteges__squere p, .advanteges__road p, .advanteges__tourists p, .advanteges__squere .advanteges__list-number, .advanteges__road .advanteges__list-number, .advanteges__tourists .advanteges__list-number {
+
+  color: @color-light-black;
+
+}
+
+.advanteges__live-description--squere, .advanteges__live-description--road {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 87%;
+    height: 1px;
+
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: @color-grey-line;
+  }
+}
+
+@media @tablet-width {
+
+  .advanteges__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;}
+
+  .advanteges__live {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+
+  }
+
+  .advanteges__live-description--live {
+    flex-basis: 33.3%;
+  }
+
+  .advanteges__live-picture-town {
+    flex-basis: 66.6%;
+    background-image: url("../img/photo-city-tablet.jpg");
+  }
+
+  .advanteges-live__items {
+    display: flex;
+  }
+
+  .advanteges__town-adventege {
+    flex-basis: 33.3%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 160px;
+    padding-bottom: 65px;
+
+    text-align: center;
+  }
+
+  .advanteges__town-adventege--suvenirs {
+    order: 2;
+  }
+
+  .advanteges__town-adventege--food {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+
+
+  .advanteges__town-adventege--hostel::after {
+    width: 75px;
+    height: 72px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-image: url("../img/icon-house-tablet.png");
+  }
+
+  .advanteges__town-adventege--suvenirs::after {
+    width: 64px;
+    height: 75px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-image: url("../img/icon-gift-tablet.png");
+  }
+
+  .advanteges__town-adventege--food::after {
+    width: 77px;
+    height: 68px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-image: url("../img/icon-burger-tablet.png");
+  }
+
+  .advanteges__bridge {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+
+  .advanteges__live-description--bridge {
+    flex-basis: 33.3%;
+  }
+
+  .advanteges__live-picture-bridge {
+    flex-basis: 66.6%;
+    background-image: url("../img/photo-bridge-tablet.png");
+  }
+
+  .advanteges__tourists, .advanteges__squere, .advanteges__road {
+    flex-basis: 33.3%;
+    text-align: center;
+  }
+
+  .advanteges__live-description--squere, .advanteges__live-description--road {
+    position: relative;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advanteges__live-description--tourists, .advanteges__live-description--road, .advanteges__live-description--squere {
+    height: 100%;
+  }
+}
+
+@media @desktop-width {
+  .advanteges__live-picture-town {
+    background-image: url("../img/photo-city-desktop.png");
+  }
+
+  .advanteges__live-picture-bridge {
+    background-image: url("../img/photo-bridge-desktop.png");
+  }
+
+  .advanteges__live-description--bridge {
+    order: 2;
+  }
+
+  .advanteges__live-picture-bridge {
+    order: 1;
+  }
+}
+
+

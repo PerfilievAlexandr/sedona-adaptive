@@ -9,6 +9,7 @@ const minify = require('gulp-csso')
 const rename = require('gulp-rename')
 const imagemin = require('gulp-imagemin')
 const del = require('del')
+const concat = require('gulp-concat')
 
 gulp.task('style', () => {
 	return gulp.src('app/less/**/*.less')
@@ -28,7 +29,7 @@ gulp.task('style', () => {
 				sort: true
 			})
 		]))
-
+		.pipe(concat('style.css'))
 		.pipe(gulp.dest('dist/css'))
 		.pipe(minify())
 		.pipe(rename('style.min.css'))

@@ -1,0 +1,166 @@
+@import "mixins";
+@import "variables";
+
+.main-nav {
+  .conteiner();
+
+}
+
+.main-nav__list {
+  position: relative;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav__item {
+  display: block;
+
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 8px 20px;
+
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
+  color: @color-white;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: @color-blue;
+}
+
+.main-nav__open {
+  display: block;
+
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+
+  font-size: 0;
+
+  z-index: 2;
+
+  &::before, &::after {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: @color-white;
+  }
+}
+
+.main-nav__open::before {
+  transform: rotate(45deg);
+}
+
+.main-nav__open::after {
+  transform: rotate(-45deg);
+}
+
+.main-nav__list li:not(:last-child) {
+  border-bottom: 1px solid #678fa8;
+}
+
+.main-nav__list li:not(:first-child) {
+  border-top: 1px solid #9ac2db;
+}
+
+.main-nav__list li:last-child .main-nav__item {
+  box-shadow: inset  0 -5px 5px -5px #333;
+}
+
+.main-nav__close {
+  position: relative;
+
+  display: block;
+  height: 56px;
+  padding-right: 45px;
+
+  font-size: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 30px;
+    height: 3px;
+    top: 18px;
+    right: 20px;
+
+    background-color: @color-blue;
+
+    box-shadow: 0 8px 0 0 @color-blue,
+    0 16px 0 0 @color-blue;
+
+  }
+}
+
+@media @tablet-width {
+
+  .main-nav__open,
+  .main-nav__close {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+  }
+
+  .main-nav__list li:first-child  {
+    margin-right: auto;
+  }
+
+  .main-nav__list li:last-child  {
+    margin-left: auto;
+  }
+
+  .main-nav__list li:nth-child(3)  {
+    margin-left: auto;
+  }
+
+  .main-nav__list li:nth-child(2)  {
+    margin-right: auto;
+  }
+
+
+  .main-nav__item {
+    font-size: 14px;
+    line-height: 26px;
+    color: @color-black;
+
+
+
+    background-color: @color-white;
+  }
+
+  .main-nav__list li:last-child .main-nav__item {
+    box-shadow: none;
+  }
+
+  .main-nav__list li:not(:last-child) {
+    border-bottom: none;
+  }
+
+  .main-nav__list li:not(:first-child) {
+    border-top: none;
+  }
+
+}
+
+@media @desktop-width {
+  .main-nav__list li:first-child .main-nav__item {
+    padding-left: 90px;
+  }
+
+  .main-nav__list li:last-child .main-nav__item {
+    padding-right: 90px;
+  }
+}
+

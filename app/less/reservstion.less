@@ -1,0 +1,84 @@
+@import "mixins";
+@import "variables";
+
+.reservation {
+  .conteiner();
+
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+.reservation__title {
+  .h3();
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.reservation p {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn {
+  .h3();
+  box-sizing: border-box;
+  background-color: @color-blue;
+  padding: 20px;
+  color: @color-white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.reservation__find-hotel {
+  display: block;
+
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.reservation__map {
+  width: auto;
+  min-height: 350px;
+  background-image: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media @tablet-width {
+  .reservation {
+    padding-top: 55px;
+  }
+
+  .reservation__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 35px;
+  }
+
+  .reservation__find-hotel {
+    width: 455px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .reservation p {
+    margin-bottom: 50px;
+  }
+
+  .reservation__map {
+    background-image: url("../img/map-tablet.png");
+  }
+}
+
+@media @desktop-width {
+  .reservation__map {
+    background-image: url("../img/map-desktop.png");
+  }
+}
