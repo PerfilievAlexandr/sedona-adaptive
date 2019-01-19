@@ -1,0 +1,161 @@
+@import "variables";
+@import "mixins";
+
+.photo-wrapper {
+
+  box-sizing: border-box;
+  padding: 20px;
+
+  border-top: 1px solid @color-grey-line;
+
+  flex-basis: 100%;
+  margin: 0 auto;
+
+}
+
+.photo-wrapper:last-child {
+  border-bottom: 1px solid @color-grey-line;
+}
+
+.photo-wrapper__img {
+  text-align: center;
+  line-height: 0;
+  margin-bottom: 25px;
+}
+
+.photo-wrapper__img img {
+  width: auto;
+  height: 280px;
+
+}
+
+.photo-wrapper__title {
+  .picture-names();
+  margin: 0;
+}
+
+.photo-wrapper__author {
+  display: block;
+
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: initial;
+  margin-bottom: 10px;
+}
+
+.photo-wrapper__like {
+  position: relative;
+
+  display: block;
+
+  box-sizing: border-box;
+  padding-left: 40px;
+
+  .picture-names();
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 21px;
+
+    left: 0;
+    bottom: 5px;
+    background-image: url("../img/like-icon.png");
+  }
+}
+
+@media @tablet-width {
+
+  .photo-wrapper {
+    padding: 0;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin: 0;
+  }
+
+  .photo-wrapper:not(:first-child) {
+    max-width: 50%;
+  }
+
+  .photo-wrapper__discription {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+
+    background-color: @color-grey-movie-controls;
+  }
+
+  .photo-wrapper:first-child .photo-wrapper__discription {
+    max-width: 100%;
+  }
+
+  .photo-wrapper:first-child img {
+    min-width: 648px;
+    height: 400px;
+  }
+
+  .photo-wrapper__img {
+    margin-bottom: 0;
+  }
+
+  .photo-wrapper__author {
+    margin-bottom: 0;
+  }
+
+  .photo-wrapper__like {
+    padding-left: 30px;
+  }
+
+  .photo-wrapper:last-child {
+    border-bottom: none;
+  }
+
+}
+
+@media @desktop-width {
+  .photo-wrapper:not(:first-child) {
+    max-width: 33.33%;
+  }
+
+  .photo-wrapper:first-child img {
+    width: 1200px;
+    height: 400px;
+  }
+
+  .photo-wrapper:not(:first-child) img {
+    width: 400px;
+    height: 267px;
+  }
+
+  .photo-wrapper__discription {
+    margin-top: -88px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: @color-white;
+  }
+
+  .photo-wrapper__title {
+    color: @color-white;
+  }
+
+  .photo-wrapper__like {
+    color: @color-white;
+
+    &::after {
+      background-image: url("../img/like-icon-white.png");
+    }
+  }
+}
+

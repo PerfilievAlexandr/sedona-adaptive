@@ -25,7 +25,24 @@
     </ul>
     <a href="#" class="main-nav__close">close</a>
   </nav>
-  <div class="page-header__picture">
+  <div class="page-header__picture  page-header__picture--photos">
+    <div class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)"
+                srcset="img/logotype-desktop.png"
+
+        />
+        <img src="./img/logotyle-mobile.png" alt="logo">
+      </picture>
+    </div>
+    <div class="page-header__text">
+      <picture>
+        <source media="(min-width: 768px)"
+                srcset="img/SEDONA-tablet.png"
+        />
+        <img src="./img/SEDONA.png" alt="text">
+      </picture>
+    </div>
   </div>
 </header>
 <section class="photos">
@@ -35,64 +52,128 @@
   <div class="photos__block">
     <div class="photo-wrapper">
       <div class="photo-wrapper__img">
-        <img src="" alt="народные просторы">
+        <picture>
+          <source media="(min-width: 1200px)"
+                  srcset="./img/photo-1-desktop.png"
+          >
+          <source media="(min-width: 768px)"
+                  srcset="./img/photo-1-tablet.png"
+          >
+          <img src="./img/photo-1-mobile.png" alt="народные просторы">
+        </picture>
       </div>
       <div class="photo-wrapper__discription">
-        <h3 class="photo-wrapper__title">Народные просторы</h3>
-        <span class="photo-wrapper__author">Автор фото: Борис</span>
+        <div class="photo-wrapper__title-author-block">
+          <h3 class="photo-wrapper__title">Народные просторы</h3>
+          <span class="photo-wrapper__author">Автор фото: Борис</span>
+        </div>
         <span class="photo-wrapper__like">1350</span>
       </div>
     </div>
     <div class="photo-wrapper">
       <div class="photo-wrapper__img">
-        <img src="" alt="растительность">
+        <picture>
+          <source media="(min-width: 1200px)"
+                  srcset="./img/photo-2-desktop.png"
+          >
+          <source media="(min-width: 768px)"
+                  srcset="./img/photo-2-tablet.png"
+          >
+          <img src="./img/photo-2-mobile.png" alt="растительность">
+        </picture>
+        >
       </div>
       <div class="photo-wrapper__discription">
-        <h3 class="photo-wrapper__title">Местная растительность</h3>
-        <span class="photo-wrapper__author">Автор фото: Сергей</span>
+        <div class="photo-wrapper__title-author-block">
+          <h3 class="photo-wrapper__title">Местная растительность</h3>
+          <span class="photo-wrapper__author">Автор фото: Сергей</span>
+        </div>
         <span class="photo-wrapper__like">143</span>
       </div>
     </div>
     <div class="photo-wrapper">
       <div class="photo-wrapper__img">
-        <img src="" alt="дорога на серер">
+        <picture>
+          <source media="(min-width: 1200px)"
+                  srcset="./img/photo-3-desktop.png"
+          >
+          <source media="(min-width: 768px)"
+                  srcset="./img/photo-3-tablet.png"
+          >
+          <img src="./img/photo-3-mobile.png" alt="дорога на серер">
+        </picture>
+        >
       </div>
       <div class="photo-wrapper__discription">
-        <h3 class="photo-wrapper__title">Дорога на север</h3>
-        <span class="photo-wrapper__author">Автор фото: Петр</span>
+        <div class="photo-wrapper__title-author-block">
+          <h3 class="photo-wrapper__title">Дорога на север</h3>
+          <span class="photo-wrapper__author">Автор фото: Петр</span>
+        </div>
         <span class="photo-wrapper__like">96</span>
       </div>
     </div>
     <div class="photo-wrapper">
       <div class="photo-wrapper__img">
-        <img src="" alt="мост дьявола">
+        <picture>
+          <source media="(min-width: 1200px)"
+                  srcset="./img/photo-4-desktop.png"
+          >
+          <source media="(min-width: 768px)"
+                  srcset="./img/photo-4-tablet.png"
+          >
+          <img src="./img/photo-4-mobile.png" alt="мост дьявола">
+        </picture>
+        >
       </div>
       <div class="photo-wrapper__discription">
-        <h3 class="photo-wrapper__title">Мост дьявола</h3>
-        <span class="photo-wrapper__author">Автор фото: Антон</span>
+        <div class="photo-wrapper__title-author-block">
+          <h3 class="photo-wrapper__title">Мост дьявола</h3>
+          <span class="photo-wrapper__author">Автор фото: Антон</span>
+        </div>
         <span class="photo-wrapper__like">254</span>
       </div>
     </div>
   </div>
-  <div class="photos__video-block">
-    <h2 class="photos__video-block-title">Все еще сомневаетесь?</h2>
-    <p class="photos__video-block-description">Смотрите видео презентацию и скорее за билетами, пока они не
-      подорожали в очередной раз!</p>
-    <div class="photos__video-movie">
-      <img src="" alt="movie">
+</section>
+<section class="video">
+  <h2 class="video__title">Все еще сомневаетесь?</h2>
+  <p class="video__description">Смотрите видео презентацию и скорее за билетами, пока они не
+    подорожали в очередной раз!</p>
+  <div class="video__block">
+    <div class="video__movie">
+      <picture>
+        <source media="(max-width: 1200px)"
+                srcset="./img/video-desktop.png"
+        >
+        <source media="(max-width: 768px)"
+                srcset="./img/video-tablet.png"
+        >
+        <img src="./img/video-mobile.png" alt="video">
+      </picture>
+    </div>
+    <div class="video__movie-controls">
+      <div class="video__movie-controls-time">
+           <span class="video__movie-reverse-line">
+          <span class="video__movie-reverse-circle"></span>
+        </span>
+      </div>
+
+      <div class="video__movie-controls-screen">
+        <span class="video__screen-controls   video__movie-controls-screen-refresh"></span>
+        <span class="video__screen-controls   video__movie-controls-screen-quality"></span>
+        <span class="video__screen-controls   video__movie-controls-screen-full-screen"></span>
+      </div>
     </div>
   </div>
 </section>
 <footer class="page-footer">
-  <div class="page-footer__visit">
-    <span class="page-footer__visit-Sedona"></span>
+  <span class="page-footer__visit-Sedona">#visitsedona</span>
+  <div class="page-footer__social">
+    <a href="#" class="page-footer__social-net">телеграмм</a>
+    <a href="#" class="page-footer__social-net">фейс</a>
+    <a href="#" class="page-footer__social-net">инст</a>
   </div>
-  <div class="page-footer__visit">
-    <a href="#" class="page-footer__sothial">телеграмм</a>
-    <a href="#" class="page-footer__sothial">фейс</a>
-    <a href="#" class="page-footer__sothial">инст</a>
-  </div>
-  <div class="page-footer">разработана html</div>
+  <div class="page-footer__developed">разработано<br> <b>Perfiliev-Alexander</b></div>
 </footer>
 </body>
 </html>

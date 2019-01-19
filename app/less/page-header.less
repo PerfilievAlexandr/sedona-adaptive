@@ -20,6 +20,11 @@
   background-position: center;
 }
 
+.page-header__picture--photos {
+  min-height: 160px;
+  background-position: bottom;
+}
+
 .page-header__logo {
   position: absolute;
   width: 102px;
@@ -33,12 +38,26 @@
 
 .page-header__text {
   position: absolute;
-  width: 282px;
-  height: 214px;
+
 
   top: 90px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.page-header__picture--photos .page-header__text {
+  top: 50px;
+}
+
+.page-header__text img {
+  width: 282px;
+  height: 214px;
+}
+
+
+.page-header__picture--photos .page-header__text img {
+  width: 229px;
+  height: 39px;
 }
 
 @media @tablet-width {
@@ -48,9 +67,24 @@
     background-image: url("../img/back-tablet.png");
   }
 
-  .page-header__text {
+  .page-header__picture--photos {
+    min-height: 346px;
+    background-position: bottom;
+  }
+
+  .page-header__picture--photos .page-header__text {
+    top: 95px;
+  }
+
+  .page-header__text img {
     width: 460px;
     height: 350px;
+  }
+
+
+  .page-header__picture--photos .page-header__text img {
+    width: 458px;
+    height: 78px;
   }
 
 }
@@ -60,6 +94,15 @@
 
     min-height: 518px;
     background-image: url("../img/back-desktop.png");
+  }
+
+  .page-header__picture--photos {
+    min-height: 357px;
+    background-position: bottom;
+  }
+
+  .page-header__picture--photos .page-header__text {
+    top: 105px;
   }
 
   .page-header__logo {

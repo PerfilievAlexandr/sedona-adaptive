@@ -1,0 +1,68 @@
+@import "mixins";
+@import "variables";
+
+.photos {
+  .conteiner();
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.photos__title {
+
+  font-size: 18px;
+  line-height: 26px;
+
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.photos__description {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.photos__block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media @tablet-width {
+  .photos {
+    box-sizing: border-box;
+    width: auto;
+    padding-top: 70px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 70px;
+  }
+
+  .photos__block {
+    justify-content: left;
+
+    max-width: 648px;
+    margin: 0 auto;
+
+  }
+
+  .photos__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .photos__description {
+    margin-bottom: 75px;
+  }
+}
+
+
+@media @desktop-width {
+  .photos {
+    padding-top: 105px;
+  }
+
+  .photos__block {
+    max-width: 100%;
+  }
+}
