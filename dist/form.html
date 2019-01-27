@@ -25,11 +25,28 @@
     </ul>
     <a href="#" class="main-nav__close">close</a>
   </nav>
-  <div class="page-header__picture">
+  <div class="page-header__picture  page-header__picture--photos">
+    <div class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)"
+                srcset="img/logotype-desktop.png"
+
+        />
+        <img src="./img/logotyle-mobile.png" alt="logo">
+      </picture>
+    </div>
+    <div class="page-header__text">
+      <picture>
+        <source media="(min-width: 768px)"
+                srcset="img/SEDONA-tablet.png"
+        />
+        <img src="./img/SEDONA.png" alt="text">
+      </picture>
+    </div>
   </div>
 </header>
 <section class="comment">
-  <input action="" class="comment__form">
+  <form action="" class="comment__form">
     <h3 class="comment__title">оставьте свой отзыв</h3>
     <p class="comment__reques">помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами
       достопримечательностях</p>
@@ -52,32 +69,32 @@
       <h4 class="comment__contact-info-title">контактная информация:</h4>
       <label for="comment__phone">
         Контактный телефон:
-        <input type="tel" name="phone" id="comment__phone" placeholder="Введите телефон">
       </label>
+      <input type="tel" name="phone" id="comment__phone" placeholder="Введите телефон">
       <span class="comment__phone-mistake">ошибка, перепроверьте номер</span>
       <label for="comment__email">
         Электронная почта:
-        <input type="email" name="email" id="comment__email" placeholder="Введите email">
       </label>
+      <input type="email" name="email" id="comment__email" placeholder="Введите email">
     </div>
     <div class="comment__impression">
       <h4 class="comment__impression-title">ваше общее впечатление:</h4>
       <input type="radio" name="impression" id="impression__good" checked>
-      <input type="radio" name="impression" id="impression__bad">
-      <input type="radio" name="impression" id="impression__difficult">
       <label for="impression__good">Скорее положительное</label>
+      <input type="radio" name="impression" id="impression__bad">
       <label for="impression__bad">Скорее отрицательное</label>
+      <input type="radio" name="impression" id="impression__difficult">
       <label for="impression__difficult">Затрудняюсь ответить</label>
     </div>
     <div class="comment__landmarks">
       <h4 class="comment__landmarks-title">посещенные достопримечательности:</h4>
       <input type="checkbox" name="landmarks" id="landmarks-bridge" checked>
-      <input type="checkbox" name="landmarks" id="landmarks-park">
-      <input type="checkbox" name="landmarks" id="landmarks-mountain" checked>
-      <input type="checkbox" name="landmarks" id="landmarks-red-mountains" checked>
       <label for="landmarks-bridge">Мост дьявола</label>
+      <input type="checkbox" name="landmarks" id="landmarks-park">
       <label for="landmarks-park">Слайд-парк</label>
+      <input type="checkbox" name="landmarks" id="landmarks-mountain" checked>
       <label for="landmarks-mountain">Гора-колокол</label>
+      <input type="checkbox" name="landmarks" id="landmarks-red-mountains" checked>
       <label for="landmarks-red-mountains">Красные скалы</label>
     </div>
     <div class="comment__emotions">
@@ -85,21 +102,22 @@
       <textarea name="emotions" id="emotions" cols="30" rows="10"
                 placeholder="Опишите подробно все свои восторги"></textarea>
     </div>
-    <span class="comment__required-fields">* - обязательные поля</span>
-    <input type="submit" value="отправить отзыв" class="comment__submit  btn">
+    <div class="comment__footer">
+      <input type="submit" value="отправить отзыв" class="comment__submit  btn">
+      <span class="comment__required-fields">* - обязательные поля</span>
+    </div>
+
   </form>
 </section>
 
 <footer class="page-footer">
-  <div class="page-footer__visit">
-    <span class="page-footer__visit-Sedona"></span>
+  <span class="page-footer__visit-Sedona">#visitsedona</span>
+  <div class="page-footer__social">
+    <a href="#" class="page-footer__social-net">телеграмм</a>
+    <a href="#" class="page-footer__social-net">фейс</a>
+    <a href="#" class="page-footer__social-net">инст</a>
   </div>
-  <div class="page-footer__visit">
-    <a href="#" class="page-footer__sothial">телеграмм</a>
-    <a href="#" class="page-footer__sothial">фейс</a>
-    <a href="#" class="page-footer__sothial">инст</a>
-  </div>
-  <div class="page-footer">разработана html</div>
+  <div class="page-footer__developed">разработано<br> <b>Perfiliev-Alexander</b></div>
 </footer>
 </body>
 </html>
