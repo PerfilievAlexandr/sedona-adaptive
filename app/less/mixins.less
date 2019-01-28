@@ -23,3 +23,29 @@
     margin: 0 auto;
   }
 }
+
+.right-bevel() {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 48px;
+  background-color: @color-white;
+  left: 50%;
+  top: 0;
+  z-index: 100;
+  transform: rotate(-7deg);
+  transform-origin: bottom left;
+}
+
+.left-bevel() {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 48px;
+  background-color: @color-white;
+  right: 50%;
+  top: 0;
+  z-index: 100;
+  transform: rotate(7deg);
+  transform-origin: bottom right;
+}

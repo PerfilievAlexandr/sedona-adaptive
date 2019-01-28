@@ -1,7 +1,36 @@
 .advanteges {
   width: 100%;
+  position: relative;
   box-sizing: border-box;
   padding-top: 45px;
+}
+.advanteges::before {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 48px;
+  background-color: #ffffff;
+  right: 50%;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+.advanteges::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 48px;
+  background-color: #ffffff;
+  left: 50%;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 .advanteges__title {
   font-size: 21px;
@@ -148,6 +177,39 @@
   background-color: #d6d6d6;
 }
 @media (min-width: 768px) {
+  .advanteges {
+    padding-top: 75px;
+  }
+  .advanteges::before {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 48px;
+    background-color: #ffffff;
+    right: 50%;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    height: 75px;
+  }
+  .advanteges::after {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 48px;
+    background-color: #ffffff;
+    left: 50%;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    height: 75px;
+  }
   .advanteges__list {
     display: flex;
     flex-wrap: wrap;
@@ -701,7 +763,7 @@
     right: -360px;
   }
   #comment__phone {
-    flex-basis: 30%;
+    flex-basis: 360px;
     order: 4;
     margin: 0;
   }
@@ -718,7 +780,7 @@
     right: -360px;
   }
   #comment__email {
-    flex-basis: 30%;
+    flex-basis: 360px;
     order: 6;
     margin: 0;
   }
@@ -774,6 +836,9 @@
   padding: 0;
   margin: 0;
 }
+.main-nav__list--closed li {
+  display: none;
+}
 .main-nav__item {
   display: block;
   margin: 0 auto;
@@ -787,32 +852,50 @@
   text-align: center;
   background-color: #81b3d2;
 }
-.main-nav__open {
+.main-nav__item[href]:hover {
+  background-color: #669ec0;
+}
+.main-nav__item[href]:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+}
+.main-nav__close {
   display: block;
   position: absolute;
   content: "";
   width: 30px;
   height: 30px;
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
   font-size: 0;
   z-index: 2;
 }
-.main-nav__open::before,
-.main-nav__open::after {
+.main-nav__close::before,
+.main-nav__close::after {
   position: absolute;
   top: 13px;
   right: 0;
   content: "";
   width: 30px;
-  height: 3px;
+  height: 4px;
   background-color: #ffffff;
 }
-.main-nav__open::before {
+.main-nav__close:hover::before,
+.main-nav__close:hover::after {
+  background-color: #e5e5e5;
+}
+.main-nav__close:active::before,
+.main-nav__close:active::after {
+  background-color: #ffffff;
+}
+.main-nav__close--closed {
+  display: none;
+}
+.main-nav__close::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.main-nav__open::after {
+.main-nav__close::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -825,25 +908,33 @@
 .main-nav__list li:last-child .main-nav__item {
   box-shadow: inset 0 -5px 5px -5px #333;
 }
-.main-nav__close {
+.main-nav__toggle {
   position: relative;
   display: block;
   height: 56px;
   padding-right: 45px;
   font-size: 0;
 }
-.main-nav__close::after {
+.main-nav__toggle::after {
   position: absolute;
   content: "";
   width: 30px;
-  height: 3px;
+  height: 4px;
   top: 18px;
   right: 20px;
   background-color: #81b3d2;
   box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
 }
+.main-nav__toggle:hover::after {
+  background-color: #669ec0;
+  box-shadow: 0 8px 0 0 #669ec0, 0 16px 0 0 #669ec0;
+}
+.main-nav__toggle:active::after {
+  background-color: #5496bd;
+  box-shadow: 0 8px 0 0 #5496bd, 0 16px 0 0 #5496bd;
+}
 @media (min-width: 768px) {
-  .main-nav__open,
+  .main-nav__toggle,
   .main-nav__close {
     display: none;
   }
@@ -867,6 +958,25 @@
     line-height: 26px;
     color: #000000;
     background-color: #ffffff;
+  }
+  .main-nav__item[href]:hover {
+    background-color: #ffffff;
+    color: #81b3d2;
+  }
+  .main-nav__item[href]:active {
+    background-color: #ffffff;
+    color: #b2b2b2;
+  }
+  .main-nav__item--active {
+    color: #9b8d84;
+  }
+  .main-nav__item--active:hover {
+    background-color: #ffffff;
+    color: #604e43;
+  }
+  .main-nav__item--active:active {
+    background-color: #ffffff;
+    color: #d6d0cc;
   }
   .main-nav__list li:last-child .main-nav__item {
     box-shadow: none;
@@ -924,6 +1034,13 @@
   font-size: 0;
   margin-right: 7px;
 }
+.page-footer__social-net:hover {
+  background-color: #669ec0;
+}
+.page-footer__social-net:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+}
 .page-footer__social-net:last-child {
   margin-right: 0;
 }
@@ -978,6 +1095,7 @@
 }
 
 .page-header {
+  position: relative;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -1277,6 +1395,13 @@
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+}
+.btn:hover {
+  background-color: #669ec0;
+}
+.btn:active {
+  background-color: #5496bd;
+  color: #88b6d1;
 }
 .reservation__find-hotel {
   display: block;

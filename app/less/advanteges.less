@@ -3,9 +3,18 @@
 
 .advanteges {
   .conteiner();
+  position: relative;
 
   box-sizing: border-box;
   padding-top: 45px;
+
+  &::before {
+    .left-bevel();
+  }
+
+  &::after {
+    .right-bevel();
+  }
 
 }
 
@@ -183,10 +192,25 @@
 
 @media @tablet-width {
 
+  .advanteges {
+    padding-top: 75px;
+
+    &::before {
+      .left-bevel();
+      height: 75px;
+    }
+
+    &::after {
+      .right-bevel();
+      height: 75px;
+    }
+  }
+
   .advanteges__list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 0;}
+    margin-bottom: 0;
+  }
 
   .advanteges__live {
     display: flex;

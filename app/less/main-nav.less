@@ -14,6 +14,10 @@
   margin: 0;
 }
 
+.main-nav__list--closed li {
+  display: none;
+}
+
 .main-nav__item {
   display: block;
 
@@ -29,17 +33,26 @@
   text-align: center;
 
   background-color: @color-blue;
+
+  &[href]:hover {
+    background-color: @color-btn-hover;
+  }
+
+  &[href]:active {
+    background-color: @color-btn-down;
+    color: @color-btn-text-down;
+  }
 }
 
-.main-nav__open {
+.main-nav__close {
   display: block;
 
   position: absolute;
   content: "";
   width: 30px;
   height: 30px;
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
 
   font-size: 0;
 
@@ -51,16 +64,32 @@
     right: 0;
     content: "";
     width: 30px;
-    height: 3px;
+    height: 4px;
     background-color: @color-white;
   }
 }
 
-.main-nav__open::before {
+.main-nav__close:hover {
+  &::before, &::after {
+    background-color: #e5e5e5;
+  }
+}
+
+.main-nav__close:active {
+  &::before, &::after {
+    background-color: @color-white;
+  }
+}
+
+.main-nav__close--closed {
+  display: none;
+}
+
+.main-nav__close::before {
   transform: rotate(45deg);
 }
 
-.main-nav__open::after {
+.main-nav__close::after {
   transform: rotate(-45deg);
 }
 
@@ -76,7 +105,7 @@
   box-shadow: inset  0 -5px 5px -5px #333;
 }
 
-.main-nav__close {
+.main-nav__toggle {
   position: relative;
 
   display: block;
@@ -90,7 +119,7 @@
     content: "";
 
     width: 30px;
-    height: 3px;
+    height: 4px;
     top: 18px;
     right: 20px;
 
@@ -100,11 +129,24 @@
     0 16px 0 0 @color-blue;
 
   }
+
+}
+
+.main-nav__toggle:hover::after {
+    background-color: @color-btn-hover;
+  box-shadow: 0 8px 0 0 @color-btn-hover,
+  0 16px 0 0 @color-btn-hover;
+}
+
+.main-nav__toggle:active::after {
+  background-color: @color-btn-down;
+  box-shadow: 0 8px 0 0 @color-btn-down,
+  0 16px 0 0 @color-btn-down;
 }
 
 @media @tablet-width {
 
-  .main-nav__open,
+  .main-nav__toggle,
   .main-nav__close {
     display: none;
   }
@@ -138,6 +180,31 @@
 
 
     background-color: @color-white;
+
+    &[href]:hover {
+      background-color: @color-white;
+      color: @color-blue;
+    }
+
+    &[href]:active {
+      background-color: @color-white;
+      color: @color-menu-text-tablet-active;
+    }
+  }
+
+  .main-nav__item--active {
+    color: #9b8d84;
+
+    &:hover {
+    background-color: @color-white;
+    color: #604e43;
+  }
+
+    &:active {
+      background-color: @color-white;
+      color: #d6d0cc;
+    }
+
   }
 
   .main-nav__list li:last-child .main-nav__item {
