@@ -374,7 +374,16 @@
   width: 100%;
   padding: 20px;
   background-color: #f2f2f2;
-  border: none;
+  border: 3px solid #f2f2f2;
+}
+.comment__personal-data input:hover {
+  background-color: #e5e5e5;
+  border: 3px solid #e5e5e5;
+}
+.comment__personal-data input:focus {
+  outline: none;
+  border: 3px solid #e5e5e5;
+  background-color: #ffffff;
 }
 .comment__contact-info {
   display: flex;
@@ -409,7 +418,18 @@
   padding: 20px;
   padding-right: 60px;
   background-color: #f2f2f2;
-  border: none;
+  border-style: solid;
+  border-width: 3px 60px 3px 3px;
+  border-color: #f2f2f2 #e6e6e6 #f2f2f2 #f2f2f2;
+}
+.comment__contact-info input:hover {
+  background-color: #e5e5e5;
+  border: 3px solid #e5e5e5;
+}
+.comment__contact-info input:focus {
+  outline: none;
+  border: 3px solid #e5e5e5;
+  background-color: #ffffff;
   border-right: 60px solid #e6e6e6;
 }
 .comment__phone-mistake {
@@ -481,10 +501,22 @@
           transform: translateY(-50%);
   background-color: #f2f2f2;
 }
+.comment__impression label:hover::before {
+  background-color: #e5e5e5;
+}
+.comment__impression label:active::before {
+  background-color: #d5d5d5;
+}
 .comment__impression input:checked + label::before {
   box-sizing: border-box;
   background-color: #333333;
   border: 15px solid #f2f2f2;
+}
+.comment__impression input:checked + label:hover::before {
+  border: 15px solid #e5e5e5;
+}
+.comment__impression input:checked + label:active::before {
+  background-color: #a4a4a4;
 }
 .comment__landmarks {
   display: flex;
@@ -528,6 +560,12 @@
           transform: translateY(-50%);
   background-color: #f2f2f2;
 }
+.comment__landmarks label:hover::before {
+  background-color: #e5e5e5;
+}
+.comment__landmarks label:active::before {
+  background-color: #d5d5d5;
+}
 .comment__landmarks input:checked + label::after {
   position: absolute;
   content: "";
@@ -557,12 +595,21 @@
   box-sizing: border-box;
   padding: 20px;
   width: 100%;
-  border: none;
   text-transform: none;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   background-color: #f2f2f2;
+  border: 3px solid #f2f2f2;
+}
+.comment__emotions textarea:hover {
+  background-color: #e5e5e5;
+  border: 3px solid #e5e5e5;
+}
+.comment__emotions textarea:focus {
+  outline: none;
+  border: 3px solid #e5e5e5;
+  background-color: #ffffff;
 }
 .comment__footer {
   padding-left: 20px;
@@ -852,8 +899,12 @@
   text-align: center;
   background-color: #81b3d2;
 }
+.main-nav__item:hover {
+  color: #eeeeee;
+}
 .main-nav__item[href]:hover {
   background-color: #669ec0;
+  color: #ffffff;
 }
 .main-nav__item[href]:active {
   background-color: #5496bd;
@@ -1221,6 +1272,7 @@
   display: block;
   box-sizing: border-box;
   padding-left: 40px;
+  cursor: pointer;
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
@@ -1308,9 +1360,38 @@
 }
 
 .photos {
+  position: relative;
   width: 100%;
   padding-top: 40px;
   margin-bottom: 40px;
+}
+.photos::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 48px;
+  background-color: #ffffff;
+  left: 50%;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+.photos::before {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 48px;
+  background-color: #ffffff;
+  right: 50%;
+  top: 0;
+  z-index: 100;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
 }
 .photos__title {
   font-size: 18px;
@@ -1331,10 +1412,42 @@
   .photos {
     box-sizing: border-box;
     width: auto;
-    padding-top: 70px;
     margin-left: 60px;
     margin-right: 60px;
     margin-bottom: 70px;
+    padding-top: 75px;
+  }
+  .photos::before {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 48px;
+    background-color: #ffffff;
+    right: 50%;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    height: 75px;
+    width: 65%;
+  }
+  .photos::after {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 48px;
+    background-color: #ffffff;
+    left: 50%;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    height: 75px;
+    width: 65%;
   }
   .photos__block {
     justify-content: left;

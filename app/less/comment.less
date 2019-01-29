@@ -55,7 +55,18 @@
   width: 100%;
   padding: 20px;
   background-color: @color-grey-movie-controls;
-  border: none;
+  border: 3px solid @color-grey-movie-controls;
+
+  &:hover {
+    background-color: @color-input-hover;
+    border: 3px solid @color-input-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: 3px solid @color-input-hover;
+    background-color: @color-white;
+  }
 }
 
 .comment__contact-info {
@@ -94,11 +105,22 @@
   padding: 20px;
   padding-right: 60px;
   background-color: @color-grey-movie-controls;
-  border: none;
-  border-right: 60px solid #e6e6e6;
-  &::after {
+  border-style: solid;
+  border-width: 3px 60px 3px 3px;
+  border-color: @color-grey-movie-controls #e6e6e6 @color-grey-movie-controls @color-grey-movie-controls;
 
+  &:hover {
+    background-color: @color-input-hover;
+    border: 3px solid @color-input-hover;
   }
+
+  &:focus {
+    outline: none;
+    border: 3px solid @color-input-hover;
+    background-color: @color-white;
+    border-right: 60px solid #e6e6e6;
+  }
+
 }
 
 .comment__phone-mistake {
@@ -180,10 +202,26 @@
   }
 }
 
+.comment__impression label:hover::before {
+  background-color: @color-input-hover;
+}
+
+.comment__impression label:active::before {
+  background-color: @color-input-active;
+}
+
 .comment__impression input:checked + label::before {
   box-sizing: border-box;
   background-color: #333333;
   border: 15px solid @color-grey-movie-controls;
+}
+
+.comment__impression input:checked + label:hover::before {
+  border: 15px solid @color-input-hover;
+}
+
+.comment__impression input:checked + label:active::before {
+  background-color: #a4a4a4;
 }
 
 .comment__landmarks {
@@ -234,6 +272,15 @@
   }
 }
 
+.comment__landmarks label:hover::before {
+  background-color: @color-input-hover;
+}
+
+.comment__landmarks label:active::before {
+  background-color: @color-input-active;
+}
+
+
 .comment__landmarks input:checked + label::after {
   position: absolute;
   content: "";
@@ -264,7 +311,6 @@
   box-sizing: border-box;
   padding: 20px;
   width: 100%;
-  border: none;
 
   text-transform: none;
   font-size: 18px;
@@ -272,6 +318,19 @@
   font-weight: bold;
 
   background-color: @color-grey-movie-controls;
+
+  border: 3px solid @color-grey-movie-controls;
+
+  &:hover {
+    background-color: @color-input-hover;
+    border: 3px solid @color-input-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: 3px solid @color-input-hover;
+    background-color: @color-white;
+  }
 }
 
 .comment__footer {
